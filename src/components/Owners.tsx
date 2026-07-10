@@ -108,7 +108,7 @@ export const Owners: React.FC = () => {
                   {/* Decorative baseline signature element */}
                   <div className="border-t border-slate-50 mt-5 pt-3 flex items-center justify-between select-none">
                     <span className="text-[9px] font-mono tracking-widest text-slate-350 uppercase">
-                      Lakshmi Board
+                      Lakshmi Enterprises
                     </span>
                     <span className="text-[10px] font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full flex items-center gap-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
