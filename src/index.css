@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-cream-50: #fdfbf7;
+  --color-cream-100: #faf6ee;
+  --color-cream-200: #f3ebd8;
+  --color-cream-300: #e3d2b3;
+  --color-cream-900: #1c150c;
+  --color-cream-950: #0f0a05;
+  
+  --color-gold-50: #fcf9f2;
+  --color-gold-100: #f5ecd6;
+  --color-gold-200: #ebd8ab;
+  --color-gold-500: #c5a059;
+  --color-gold-600: #ad8332;
+  --color-gold-700: #8c6523;
+  --color-gold-900: #382508;
+}
+
+@layer utilities {
+  /* Elegant luxurious glow & scrollbar-hiding elements */
+  .glass-header {
+    background-color: rgba(253, 251, 247, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+  }
+
+  .glass-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(197, 160, 89, 0.12);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(197, 160, 89, 0.2);
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

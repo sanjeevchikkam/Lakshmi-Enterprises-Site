@@ -1,0 +1,6 @@
+{
+  "name": "Lakshmi Enterprises",
+  "description": "Premium multi-brand Home and Kitchen appliances store featuring luxury cookware, insulated casseroles, steel bottles, and state-of-the-art grinders.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
