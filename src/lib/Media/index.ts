@@ -1,5 +1,5 @@
 // Generated brand assets for Lakshmi Enterprises
-import logoImg from '../../assets/images/lakshmi_logo_1780552135604.png';
+import logoImg from '../../assets/images/Le_Logo.png';
 import heroImg1 from '../../assets/images/hero_kitchen_1_1780552154648.png';
 import heroImg2 from '../../assets/images/hero_appliances_2_1780552171936.png';
 import ownerPradeepImg from '../../assets/images/owner_pradeep_1780769261398.png';
