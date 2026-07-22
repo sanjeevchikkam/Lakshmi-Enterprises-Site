@@ -29,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection }) => {
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-lg font-bold text-white tracking-wider">Lakshmi Enterprises</span>
-                <span className="text-[9px] uppercase tracking-[2px] text-gold-400 font-bold -mt-1">Luxury Homeware</span>
+                <span className="text-[9px] uppercase tracking-[2px] text-gold-400 font-bold -mt-1">Home & Kitchen Appliances</span>
               </div>
             </div>
 
@@ -63,7 +63,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection }) => {
           {/* Col 2: Store Shortcuts */}
           <div>
             <h4 className="font-sans text-xs font-bold uppercase tracking-[2.5px] text-gold-400 mb-5 text-left">
-              Warehouse Navigation
+              Navigation
             </h4>
             <ul className="space-y-3.5 text-left">
               {['home', 'offers', 'products', 'contact'].map((item) => (
@@ -82,13 +82,13 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection }) => {
           {/* Col 3: Warehouse Details */}
           <div>
             <h4 className="font-sans text-xs font-bold uppercase tracking-[2.5px] text-gold-400 mb-5 text-left">
-              Hours & Customer desk
+              Working Hours
             </h4>
             <ul className="space-y-4 text-left">
               <li className="flex items-start space-x-3">
                 <Clock className="h-4 w-4 text-gold-400 shrink-0 mt-0.5" />
                 <div className="text-xs text-cream-100/70">
-                  <p className="font-semibold text-white">Open Daily</p>
+                  <p className="font-semibold text-white">Open Daily (Not Sunday)</p>
                   <p className="mt-0.5">10:00 AM — 08:00 PM</p>
                 </div>
               </li>
@@ -96,7 +96,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection }) => {
                 <Mail className="h-4 w-4 text-gold-400 shrink-0 mt-0.5" />
                 <div className="text-xs text-cream-100/70">
                   <p className="font-semibold text-white">Write Us</p>
-                  <p className="mt-0.5">lakshmienterprises@gmail.com</p>
+                  <p className="mt-0.5">lebabji@gmail.com</p>
                 </div>
               </li>
             </ul>
@@ -154,7 +154,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection }) => {
 
         {/* Brand Copyright bottom bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-cream-100/40">
-          <p>© {currentYear} Lakshmi Enterprises. All rights reserved. Multi-brand general homeware distribution hub.</p>
+          <p>© {currentYear} Lakshmi Enterprises. All rights reserved. Multi-brand general Home and Kitchen Appliances distribution hub.</p>
           <div className="flex items-center space-x-4 mt-3 md:mt-0">
             <span className="hover:text-gold-400 transition cursor-pointer">Terms of Service</span>
             <span className="hover:text-gold-400 transition cursor-pointer">Privacy Policy</span>

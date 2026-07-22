@@ -18,7 +18,7 @@ const ownersData: Owner[] = [
     image: OWNER_PRADEEP_IMAGE,
   },
   {
-    name: 'P. Baabji',
+    name: 'P. Babji',
     position: 'Owner',
     description: 'A good visionary one with full commitment and legacy',
     image: OWNER_BAABJI_IMAGE,
