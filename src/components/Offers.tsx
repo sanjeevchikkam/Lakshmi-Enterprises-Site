@@ -96,7 +96,7 @@ Thank you`;
                 id={`offer-card-${offer.offerId}`}
               >
                 {/* Image Wrap */}
-                <div className="relative h-[180px] md:h-[220px] overflow-hidden">
+                <div className="relative w-full aspect-square overflow-hidden">
                   <img
                     src={urlFor(offer.image)}
                     alt={offer.title}

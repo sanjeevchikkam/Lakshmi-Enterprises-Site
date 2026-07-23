@@ -61,7 +61,7 @@ export const Stats: React.FC = () => {
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold-100 text-gold-700 mb-4 shadow-2xs">
               <Users className="h-6 w-6" />
             </div>
-            <AnimatedCounter value={200} suffix="+" />
+            <AnimatedCounter value={10000} suffix="+" />
             <span className="font-sans text-xs font-bold text-cream-900 tracking-widest uppercase mt-3">
               Happy Customers
             </span>
@@ -75,7 +75,7 @@ export const Stats: React.FC = () => {
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold-100 text-gold-700 mb-4 shadow-2xs">
               <ShoppingCart className="h-6 w-6" />
             </div>
-            <AnimatedCounter value={150} suffix="+" />
+            <AnimatedCounter value={1000} suffix="+" />
             <span className="font-sans text-xs font-bold text-cream-900 tracking-widest uppercase mt-3">
               Products Available
             </span>
@@ -89,7 +89,7 @@ export const Stats: React.FC = () => {
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold-100 text-gold-700 mb-4 shadow-2xs">
               <Award className="h-6 w-6" />
             </div>
-            <AnimatedCounter value={15} suffix="+" />
+            <AnimatedCounter value={30} suffix="+" />
             <span className="font-sans text-xs font-bold text-cream-900 tracking-widest uppercase mt-3">
               Years of Service
             </span>

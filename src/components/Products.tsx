@@ -122,11 +122,11 @@ export const Products: React.FC = () => {
         
         {/* Title */}
         <div className="text-center max-w-xl mx-auto mb-6 md:mb-8">
-          <span className="font-sans text-[10px] tracking-[4px] uppercase font-bold text-gold-500">OUR CATALOGUE</span>
-          <h2 className="font-serif text-3xl font-extrabold text-cream-900 mt-1 md:text-4xl">Browse Luxury Collections</h2>
-          <p className="font-sans text-xs md:text-sm text-gray-500 mt-2">
+          {/* <span className="font-sans text-[10px] tracking-[4px] uppercase font-bold text-gold-500">OUR CATALOGUE</span> */}
+          <h2 className="font-serif text-3xl font-extrabold text-cream-900 mt-1 md:text-4xl">Browse Our Collections & Catalouge</h2>
+          {/* <p className="font-sans text-xs md:text-sm text-gray-500 mt-2">
             Dynamic live filter by enterprise brands, sizes, and collections. Select colors and build your order on-the-go.
-          </p>
+          </p> */}
         </div>
 
         {/* Global Filter Toolbar Panel */}
@@ -141,7 +141,7 @@ export const Products: React.FC = () => {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full rounded-full border border-gray-200/80 bg-cream-50/30 py-3.5 pl-12 pr-10 text-sm text-gray-800 placeholder-gray-400 focus:border-gold-500 focus:bg-white focus:outline-hidden shadow-xs transition-all"
+              className="w-full rounded-full border-2 border-gray-800/80 bg-cream-50/30 py-3.5 pl-12 pr-10 text-sm text-gray-800 placeholder-gray-600 focus:border-gold-500 focus:bg-white focus:outline-hidden shadow-xs transition-all"
               placeholder="Search products by title, company, or collection..."
               id="product-search-input"
             />
@@ -158,7 +158,7 @@ export const Products: React.FC = () => {
           {/* BRAND/COMPANY FILTERS */}
           <div className="w-full">
             <span className="block text-[11px] font-bold text-gray-400 uppercase tracking-widest text-left mb-2.5">
-              Filter by Distributor Brand
+              Filter by Brand
             </span>
             <div className="flex flex-wrap gap-2.5">
               <button

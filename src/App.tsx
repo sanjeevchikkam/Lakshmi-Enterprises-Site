@@ -13,6 +13,7 @@ import { Offers } from './components/Offers';
 import { Products } from './components/Products';
 import { Stats } from './components/Stats';
 import { Owners } from './components/Owners';
+import { Brands } from './components/brands'
 import { Footer } from './components/Footer';
 import { CartDrawer } from './components/CartDrawer';
 
@@ -53,13 +54,16 @@ const StorefrontLayout: React.FC = () => {
         </section>
 
         {/* DISTRIBUTORS SPECIAL ANNOUNCEMENT BLOCK */}
-        <div className="bg-cream-950 py-3 text-center border-y border-gold-500/20">
+        {/* <div className="bg-cream-950 py-3 text-center border-y border-gold-500/20">
           <div className="mx-auto max-w-7xl px-4 flex items-center justify-center space-x-2 text-white text-[10px] md:text-xs font-bold uppercase tracking-[2px]">
             <Sparkles className="h-4 w-4 text-gold-400 shrink-0 animate-pulse" />
             <span className="text-gold-100">Lakshmi Enterprises General Merchant Wholesale Hub</span>
             <span className="hidden sm:inline bg-gold-500 text-cream-950 text-[9px] font-extrabold px-1.5 py-0.5 rounded ml-2">MILTON SPECIAL DEALER RATES</span>
           </div>
-        </div>
+        </div> */}
+
+        {/*Brands Scrolling */}
+        <Brands/>
 
         {/* CATALOG PRODUCTS WITH FILTERS & LIVE SEARCH SECTION */}
         <Products />
@@ -71,7 +75,7 @@ const StorefrontLayout: React.FC = () => {
         <Stats />
 
         {/* OWNER CARDS SECTION */}
-        <Owners />
+        {/* <Owners /> */}
 
       </main>
 
