@@ -36,10 +36,10 @@ export const Header: React.FC<HeaderProps> = ({ onScrollToSection, onOpenCart })
             />
           </div>
           <div className="flex flex-col">
-            <span className="font-serif text-lg font-bold tracking-wide text-cream-900 md:text-xl">
+            <span className="font-serif text-xl font-bold tracking-wide text-cream-900 md:text-2xl">
               LAKSHMI ENTERPRISES
             </span>
-            <span className="font-sans text-[10px] tracking-[4px] uppercase text-gold-500 font-semibold -mt-1">
+            <span className="font-sans text-[12px] tracking-[4px] uppercase text-gold-500 font-semibold -mt-1">
               Home & Kitchen Appliances
             </span>
           </div>
