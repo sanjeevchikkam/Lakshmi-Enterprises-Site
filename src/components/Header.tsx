@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = ({ onScrollToSection, onOpenCart })
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full glass-header shadow-xs">
+    <header className="relative sticky top-0 z-50 w-full glass-header shadow-xs">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
         {/* Logo and Brand Name */}
         <div 
@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ onScrollToSection, onOpenCart })
           className="flex cursor-pointer items-center space-x-3 group"
           id="header-brand-logo"
         >
-          <div className="relative h-15 w-15 overflow-hidden rounded-full border border-gold-200/50 bg-white p-0.5 shadow-sm transition-transform duration-300 group-hover:scale-105">
+          <div className="relative h-15 w-15 overflow-hidden  shadow-sm transition-transform duration-300 group-hover:scale-105">
             <img 
               src={LOGO_IMAGE_PATH} 
               alt="Lakshmi Enterprises Logo" 
