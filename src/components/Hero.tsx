@@ -105,7 +105,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToSection }) => {
         className="relative h-full min-w-full shrink-0"
       >
         <div
-  className="h-full w-full bg-contain bg-center bg-no-repeat"
+  className="h-full w-full bg-contain bg-center"
   style={{ backgroundImage: `url(${slide.url})` }}
 />
       </div>
