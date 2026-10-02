@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, MessageSquare, ArrowRight, User, Shield, Phone, MapPin, X } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { HERO_IMAGE_1, HERO_IMAGE_2 } from '../lib/Media';
+import { HERO_IMAGE_1, HERO_IMAGE_2, HERO_1 } from '../lib/Media';
 import { DealerEnquiry } from '../types';
 
 interface HeroProps {
@@ -11,6 +11,13 @@ interface HeroProps {
 }
 
 const sliderImages = [
+  {
+    url: HERO_1,  
+    tag: "AESTHETIC LIVING",
+    heading: "Quality Home & Kitchen Products From Many Years",
+    subheading: "Trusted for 15+ Years",
+    desc: "Highly durable kitchenware, casseroles, premium steel flasks, and culinary mixers."
+  },
   {
     url: HERO_IMAGE_1,
     tag: "AESTHETIC LIVING",
@@ -81,28 +88,30 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToSection }) => {
   };
 
   return (
-    <section id="hero" className="relative h-[55vh] min-h-[340px] md:h-[65vh] w-full overflow-hidden bg-cream-950">
+    <section
+  id="hero"
+  className="relative w-full bg-cream-50 px-3 py-3 md:px-6 md:py-5"
+>
       {/* Slider Slides */}
-      <div className="absolute inset-0 h-full w-full">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: 'easeInOut' }}
-            className="absolute inset-0 h-full w-full"
-          >
-            {/* Background image cover */}
-            <div
-              className="h-full w-full bg-cover bg-center"
-              style={{ backgroundImage: `url(${sliderImages[currentIndex].url})` }}
-            />
-            {/* Dark Golden Luxurious Overlay */}
-            <div className="absolute inset-0 bg-linear-to-r from-cream-900/90 via-cream-900/70 to-transparent" />
-          </motion.div>
-        </AnimatePresence>
+      {/* Horizontal Hero Image Slider */}
+<div className="relative w-full aspect-video overflow-hidden rounded-2xl border border-cream-900/10 md:aspect-[16/5] md:rounded-3xl"> <motion.div
+    className="flex h-full w-full"
+    animate={{ x: `-${currentIndex * 100}%` }}
+    transition={{ duration: 0.7, ease: 'easeInOut' }}
+  >
+    {sliderImages.map((slide, index) => (
+      <div
+        key={index}
+        className="relative h-full min-w-full shrink-0"
+      >
+        <div
+  className="h-full w-full bg-contain bg-center bg-no-repeat"
+  style={{ backgroundImage: `url(${slide.url})` }}
+/>
       </div>
+    ))}
+  </motion.div>
+</div>
 
       {/* Slide Navigation Arrows */}
       <button
@@ -121,80 +130,43 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToSection }) => {
       </button>
 
       {/* Hero Content Container */}
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-6 md:px-12">
-        <div className="max-w-2xl text-left text-white">
-          {/* Animated Tags & Indicators */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="mb-2 inline-flex items-center space-x-2 rounded-full border border-gold-400/30 bg-gold-500/10 px-4.5 py-1 text-xs font-bold uppercase tracking-[2px] text-gold-200 backdrop-blur-md"
-          >
-            <span>{sliderImages[currentIndex].tag}</span>
-            <span className="h-1 w-1 rounded-full bg-gold-400" />
-            <span>{sliderImages[currentIndex].subheading}</span>
-          </motion.div>
 
-          {/* Core App Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="font-serif text-2xl font-extrabold leading-tight tracking-wide text-white md:text-4xl lg:text-5xl text-glow"
-          >
-            {sliderImages[currentIndex].heading}
-          </motion.h1>
+      {/* Hero Action Buttons */}
+<div className="absolute bottom-10 left-6 z-20 flex flex-col items-start gap-2 md:bottom-12 md:left-10">
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="mt-2 font-sans text-sm text-cream-100/90 md:text-base leading-relaxed leading-extra-loose"
-          >
-            {sliderImages[currentIndex].desc}
-          </motion.p>
+  <button
+    onClick={() => onScrollToSection('products')}
+    className="flex items-center space-x-1.5 rounded-full bg-gold-500 px-5 py-2.5 text-xs font-bold tracking-wide text-cream-950 shadow-lg hover:bg-gold-200 transition-all duration-300 active:scale-95 cursor-pointer"
+    id="hero-cta-view-products"
+  >
+    <span>View Products</span>
+    <ArrowRight className="h-4 w-4" />
+  </button>
 
-          {/* Action CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.5 }}
-            className="mt-5 flex flex-wrap gap-2"
-          >
-            <button
-              onClick={() => onScrollToSection('products')}
-              className="flex items-center space-x-1.5 rounded-full bg-gold-500 px-5 py-2.5 text-xs font-bold tracking-wide text-cream-950 shadow-lg hover:bg-gold-200 transition-all duration-300 active:scale-95 cursor-pointer"
-              id="hero-cta-view-products"
-            >
-              <span>View Products</span>
-              <ArrowRight className="h-4 w-4" />
-            </button>
+  <button
+    onClick={() => setIsDealerModalOpen(true)}
+    className="flex items-center space-x-1.5 rounded-full border border-white/40 bg-white/10 px-5 py-2.5 text-xs font-bold tracking-wide text-white backdrop-blur-md hover:bg-white hover:text-cream-900 transition-all duration-300 active:scale-95 cursor-pointer"
+    id="hero-cta-be-dealer"
+  >
+    <Shield className="h-4 w-4" />
+    <span>Be a Dealer</span>
+  </button>
 
-            <button
-              onClick={() => setIsDealerModalOpen(true)}
-              className="flex items-center space-x-1.5 rounded-full border border-white/40 bg-white/10 px-5 py-2.5 text-xs font-bold tracking-wide text-white backdrop-blur-md hover:bg-white hover:text-cream-900 transition-all duration-300 active:scale-95 cursor-pointer"
-              id="hero-cta-be-dealer"
-            >
-              <Shield className="h-4 w-4" />
-              <span>Be a Dealer</span>
-            </button>
+  <a
+    href={`https://wa.me/7416956129?text=${encodeURIComponent("Hello Lakshmi Enterprises, I would like to inquire about kitchen products and overall deals. Thank you!")}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center space-x-1.5 rounded-full bg-emerald-500 px-5 py-2.5 text-xs font-bold tracking-wide text-white hover:bg-emerald-600 transition-all duration-300 active:scale-95"
+    id="hero-cta-whatsapp-enquiry"
+  >
+    <MessageSquare className="h-4 w-4" />
+    <span>WhatsApp Inquiry</span>
+  </a>
 
-            <a
-              href={`https://wa.me/7416956129?text=${encodeURIComponent("Hello Lakshmi Enterprises, I would like to inquire about kitchen products and overall deals. Thank you!")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-1.5 rounded-full bg-emerald-500 px-5 py-2.5 text-xs font-bold tracking-wide text-white hover:bg-emerald-600 transition-all duration-300 active:scale-95"
-              id="hero-cta-whatsapp-enquiry"
-            >
-              <MessageSquare className="h-4 w-4" />
-              <span>WhatsApp Inquiry</span>
-            </a>
-          </motion.div>
-        </div>
-      </div>
-
+</div>
+      
       {/* Slider Carousel Dot Indicators */}
-      <div className="absolute bottom-2 left-1/2 z-20 flex -translate-x-1/2 space-x-2.5">
+      <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 space-x-2.5">
         {sliderImages.map((_, i) => (
           <button
             key={i}
