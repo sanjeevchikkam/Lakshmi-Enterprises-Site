@@ -17,21 +17,21 @@ const sliderImages = [
     heading: "Quality Home & Kitchen Products From Many Years",
     subheading: "Trusted for 15+ Years",
     desc: "Highly durable kitchenware, casseroles, premium steel flasks, and culinary mixers."
-  },
-  {
-    url: HERO_IMAGE_1,
-    tag: "AESTHETIC LIVING",
-    heading: "Quality Home & Kitchen Products From Many Years",
-    subheading: "Trusted for 15+ Years",
-    desc: "Highly durable kitchenware, casseroles, premium steel flasks, and culinary mixers."
-  },
-  {
-    url: HERO_IMAGE_2,
-    tag: "LUXURY CRAFT",
-    heading: "Excellence & Complete Culinary Trust",
-    subheading: "Exclusive Multi-Brand Distributor",
-    desc: "Authorized partner of elite brands. Unrivaled customer care, competitive dealer margins"
   }
+  // {
+  //   url: HERO_IMAGE_1,
+  //   tag: "AESTHETIC LIVING",
+  //   heading: "Quality Home & Kitchen Products From Many Years",
+  //   subheading: "Trusted for 15+ Years",
+  //   desc: "Highly durable kitchenware, casseroles, premium steel flasks, and culinary mixers."
+  // },
+  // {
+  //   url: HERO_IMAGE_2,
+  //   tag: "LUXURY CRAFT",
+  //   heading: "Excellence & Complete Culinary Trust",
+  //   subheading: "Exclusive Multi-Brand Distributor",
+  //   desc: "Authorized partner of elite brands. Unrivaled customer care, competitive dealer margins"
+  // }
 ];
 
 const dealerSchema = z.object({
