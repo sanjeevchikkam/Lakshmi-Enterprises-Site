@@ -4,7 +4,7 @@ import heroImg1 from '../../assets/images/hero_kitchen_1_1780552154648.png';
 import heroImg2 from '../../assets/images/hero_appliances_2_1780552171936.png';
 import ownerPradeepImg from '../../assets/images/owner_pradeep_1780769261398.png';
 import ownerBaabjiImg from '../../assets/images/owner_baabji_1780769279097.png';
-import hero1 from '../../assets/images/Prestige_Kitchen_Appliance_Exchange_Offer.png';
+import hero1 from '../../assets/images/Prestige_Kitchen_Appliance_Exchange_Offer_500KB.webp';
 
 export const LOGO_IMAGE_PATH = logoImg;
 export const HERO_IMAGE_1 = heroImg1;
