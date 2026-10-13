@@ -23,6 +23,9 @@ export const Products: React.FC = () => {
   // Product Card Specific details: Selected color for each product ID
   const [productColorSelections, setProductColorSelections] = useState<Record<string, Color>>({});
 
+  const [isBrandsOpen, setIsBrandsOpen] = useState(false);
+const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
+
   // Fetch from CMS on Mount
   useEffect(() => {
     async function loadCMSData() {
@@ -157,9 +160,22 @@ export const Products: React.FC = () => {
 
           {/* BRAND/COMPANY FILTERS */}
           <div className="w-full">
-            <span className="block text-[11px] font-bold text-gray-400 uppercase tracking-widest text-left mb-2.5">
-              Filter by Brand
-            </span>
+            
+
+<button
+  type="button"
+  onClick={() => setIsBrandsOpen(prev => !prev)}
+  aria-expanded={isBrandsOpen}
+  className="flex w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-xs font-bold text-gray-700 shadow-sm transition-all hover:border-gray-400 hover:bg-gray-50 hover:shadow-md active:scale-[0.99]"
+>
+  <span>Filter by Brand</span>
+  {isBrandsOpen ? (
+    <Minus className="h-4 w-4 text-gray-600" />
+  ) : (
+    <Plus className="h-4 w-4 text-gray-600" />
+  )}
+</button>
+{isBrandsOpen && (
             <div className="flex flex-wrap gap-2.5">
               <button
                 onClick={() => handleSelectCompany(null)}
@@ -198,13 +214,30 @@ export const Products: React.FC = () => {
                 );
               })}
             </div>
+            )}
           </div>
 
           {/* CATEGORY FILTERS */}
           <div className="w-full pt-1">
-            <span className="block text-[11px] font-bold text-gray-400 uppercase tracking-widest text-left mb-2.5">
-              Filter by Product Category {selectedCompany ? `within ${selectedCompany.name}` : ''}
-            </span>
+            
+
+<button
+  type="button"
+  onClick={() => setIsCategoriesOpen(prev => !prev)}
+  aria-expanded={isCategoriesOpen}
+  className="flex w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-xs font-bold text-gray-700 shadow-sm transition-all hover:border-gray-400 hover:bg-gray-50 hover:shadow-md active:scale-[0.99]"
+>
+  <span>
+    Filter by Product Category
+    {selectedCompany ? ` within ${selectedCompany.name}` : ''}
+  </span>
+  {isCategoriesOpen ? (
+    <Minus className="h-4 w-4 text-gray-600" />
+  ) : (
+    <Plus className="h-4 w-4 text-gray-600" />
+  )}
+</button>
+{isCategoriesOpen && (
             <div className="flex flex-wrap gap-2.5">
               <button
                 onClick={() => handleSelectCategory(null)}
@@ -235,6 +268,7 @@ export const Products: React.FC = () => {
                 );
               })}
             </div>
+            )}
           </div>
         </div>
 
@@ -434,7 +468,7 @@ export const Products: React.FC = () => {
                           id={`order-btn-${prod.productId}`}
                         >
                           <ShoppingBag className="h-3.5 w-3.5" />
-                          <span>Add to Order</span>
+                          <span>Add to Cart</span>
                         </motion.button>
                       )}
                     </AnimatePresence>

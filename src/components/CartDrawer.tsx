@@ -60,7 +60,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
             {/* Header portion */}
             <div className="p-5 border-b border-gray-200/70 bg-white flex items-center justify-between">
               <div className="flex items-center space-x-2.5">
-                <span className="font-serif text-lg font-extrabold text-cream-900">Your Order Cart</span>
+                <span className="font-serif text-lg font-extrabold text-cream-900">Your Enquiry Cart</span>
                 <span className="bg-gold-100 text-gold-800 text-[11px] font-bold px-2 py-0.5 rounded-full font-mono">
                   {cartCount} Items
                 </span>
@@ -203,7 +203,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
               {cart.length > 0 && (
                 <div id="checkout-form-container" className="mt-6 border-t border-gray-200/60 pt-5 space-y-4">
                   <h4 className="font-serif text-sm font-bold text-cream-900 tracking-wide uppercase">
-                    Delivery & Billing Information
+                    Your Information
                   </h4>
                   
                   {/* Name field */}
@@ -270,8 +270,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                   <div id="checkout-note-block" className="bg-amber-50/50 border border-gold-200/30 rounded-xl p-3.5 flex items-start space-x-2 text-[11px] leading-relaxed text-amber-900 select-none">
                     <AlertCircle className="h-4 w-4 text-gold-600 shrink-0 mt-0.5" />
                     <p>
-                      <strong>Note:</strong> Once you place order via whatsapp. you'll get QR for payment and once you pay. Your order will be confirm.
-                    </p>
+                      <strong>Note:</strong> This won't create a real order. This allow you to get the more information about the products selected. Once you liked you can confirm there          </p>
                   </div>
                 </div>
               )}
@@ -286,18 +285,18 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                     <span className="font-bold text-cream-950 font-mono">{cartCount}</span>
                   </div>
                   
-                  <div className="flex justify-between items-center text-xs text-gray-600">
+                  {/* <div className="flex justify-between items-center text-xs text-gray-600">
                     <span>Shipping Handling:</span>
                     <span className="font-bold text-emerald-600 uppercase tracking-wide">Free Delivery</span>
-                  </div>
+                  </div> */}
 
                   <div className="border-t border-dashed my-2 border-gray-200"></div>
 
                   <div className="flex justify-between items-end">
-                    <span className="text-sm font-bold text-cream-950">Grand Order Total:</span>
+                    <span className="text-sm font-bold text-cream-950">Selected items Total:</span>
                     <div className="text-right">
                       <span className="text-lg font-extrabold text-cream-950 block">₹{cartTotal}</span>
-                      <span className="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block">GST inclusive</span>
+                      
                     </div>
                   </div>
                 </div>
@@ -307,7 +306,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                     onClick={clearCart}
                     className="py-3 border border-red-200 rounded-full text-xs font-bold text-red-600 hover:bg-red-50 hover:border-red-300 transition duration-300 cursor-pointer"
                   >
-                    Clear Order
+                    Clear Cart
                   </button>
 
                   <button
@@ -315,7 +314,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                     className="py-3 bg-emerald-600 text-white rounded-full text-xs font-bold hover:bg-emerald-700 transition duration-300 flex items-center justify-center space-x-1.5 cursor-pointer"
                   >
                     <MessageSquare className="h-4 w-4" />
-                    <span>Confirm Order</span>
+                    <span>Send Enquiry</span>
                   </button>
                 </div>
               </div>

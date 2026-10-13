@@ -98,7 +98,7 @@ const StorefrontLayout: React.FC = () => {
             >
               <div className="flex items-center space-x-2">
                 <MessageSquare className="h-4.5 w-4.5 animate-pulse shrink-0" />
-                <span>Confirm Order ({cartCount})</span>
+                <span>Send Enquiry ({cartCount})</span>
               </div>
               <span className="bg-white/20 text-white rounded-md px-2 py-0.5 font-mono text-xs">
                 View Cart
